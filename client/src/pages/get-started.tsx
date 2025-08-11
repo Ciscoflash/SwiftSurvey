@@ -95,6 +95,18 @@ export default function GetStartedScreen() {
             >
               Location
             </button>
+            <button 
+              onClick={() => navigateToScreen("/friends")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Friends
+            </button>
+            <button 
+              onClick={() => navigateToScreen("/photo-capture")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Photo
+            </button>
           </div>
         </div>
       </div>

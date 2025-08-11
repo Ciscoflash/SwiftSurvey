@@ -272,3 +272,9 @@
     padding: 0.5rem;
   }
 }
+
+/* Handwriting font for polaroid captions */
+.font-handwriting {
+  font-family: 'Marker Felt', 'Comic Sans MS', cursive;
+  font-weight: normal;
+}

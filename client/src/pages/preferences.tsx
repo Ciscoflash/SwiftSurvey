@@ -31,7 +31,7 @@ export default function PreferencesScreen() {
   };
 
   const handleNext = () => {
-    navigateToScreen("/main-app");
+    navigateToScreen("/friends");
   };
 
   return (
@@ -47,7 +47,7 @@ export default function PreferencesScreen() {
         <div className="flex justify-end mb-4">
           <button 
             className="text-white/70 text-sm hover:text-white transition-colors"
-            onClick={() => navigateToScreen("/main-app")}
+            onClick={() => navigateToScreen("/friends")}
           >
             Skip
           </button>
