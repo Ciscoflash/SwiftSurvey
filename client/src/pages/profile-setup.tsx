@@ -79,9 +79,9 @@ export default function ProfileSetupScreen() {
       transition={{ duration: 0.3 }}
       className="gradient-bg-alt min-h-screen min-h-[100dvh]"
     >
-      <div className="mobile-content h-full flex flex-col">
+      <div className="mobile-content min-h-[100dvh] flex flex-col">
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-4 sm:mb-6">
           <div className="text-white">
             <div className="text-sm text-gray-400 mb-1">Profile</div>
           </div>
@@ -94,22 +94,22 @@ export default function ProfileSetupScreen() {
         </div>
 
         {/* Profile Picture */}
-        <div className="text-center mb-6 sm:mb-8">
+        <div className="text-center mb-4 sm:mb-6">
           <div className="relative inline-block">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-tempo-orange to-tempo-orange-light rounded-full flex items-center justify-center mx-auto mb-2">
-              <span className="text-xl sm:text-2xl">👤</span>
+            <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-tempo-orange to-tempo-orange-light rounded-full flex items-center justify-center mx-auto mb-2">
+              <span className="text-lg sm:text-xl md:text-2xl">👤</span>
             </div>
-            <button className="absolute bottom-0 right-0 w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <Camera size={14} className="sm:size-4 text-gray-600" />
+            <button className="absolute bottom-0 right-0 w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Camera size={12} className="sm:size-3 md:size-4 text-gray-600" />
             </button>
           </div>
-          <div className="text-white text-sm">Tempo@live.com</div>
+          <div className="text-white text-xs sm:text-sm">Tempo@live.com</div>
         </div>
 
-        {/* Form */}
-        <div className="flex-1">
+        {/* Form - Scrollable container */}
+        <div className="flex-1 min-h-0 overflow-y-auto">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4 pb-4">
               <FormField
                 control={form.control}
                 name="fullName"
@@ -119,7 +119,7 @@ export default function ProfileSetupScreen() {
                     <FormControl>
                       <Input
                         placeholder="John doe"
-                        className="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
+                        className="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors text-sm sm:text-base"
                         {...field}
                         onFocus={() => setShowKeyboard(false)}
                       />
@@ -138,7 +138,7 @@ export default function ProfileSetupScreen() {
                     <FormControl>
                       <Input
                         placeholder="partypooper"
-                        className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
+                        className="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2 sm:px-4 sm:py-3 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors text-sm sm:text-base"
                         {...field}
                         onFocus={() => setShowKeyboard(true)}
                       />
@@ -159,7 +159,7 @@ export default function ProfileSetupScreen() {
                         <Input
                           type={showPassword ? "text" : "password"}
                           placeholder="••••••••"
-                          className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
+                          className="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2 sm:px-4 sm:py-3 pr-10 sm:pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors text-sm sm:text-base"
                           {...field}
                           onFocus={() => setShowKeyboard(false)}
                         />
@@ -188,7 +188,7 @@ export default function ProfileSetupScreen() {
                         <Input
                           type={showConfirmPassword ? "text" : "password"}
                           placeholder="••••••••"
-                          className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
+                          className="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2 sm:px-4 sm:py-3 pr-10 sm:pr-12 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors text-sm sm:text-base"
                           {...field}
                           onFocus={() => setShowKeyboard(false)}
                         />
@@ -213,13 +213,26 @@ export default function ProfileSetupScreen() {
           </Form>
         </div>
 
+        {/* Setup Account Button */}
+        <div className="mt-auto pt-4 pb-safe">
+          <motion.button
+            whileHover={{ scale: isLoading ? 1 : 1.02 }}
+            whileTap={{ scale: isLoading ? 1 : 0.98 }}
+            className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            onClick={form.handleSubmit(onSubmit)}
+            disabled={isLoading}
+          >
+            {isLoading ? "Setting up..." : "Setup Account"}
+          </motion.button>
+        </div>
+
         {/* Virtual Keyboard */}
         {showKeyboard && (
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
-            className="mt-4 bg-white/5 rounded-t-2xl p-3 sm:p-4 keyboard-responsive"
+            className="fixed bottom-0 left-0 right-0 bg-white/5 rounded-t-2xl p-3 sm:p-4 keyboard-responsive z-50"
           >
             {keyboardLayout.map((row, rowIndex) => (
               <div key={rowIndex} className="flex justify-center gap-1 mb-2">
@@ -247,19 +260,6 @@ export default function ProfileSetupScreen() {
             </div>
           </motion.div>
         )}
-
-        {/* Setup Account Button */}
-        <div className="mt-4 sm:mt-6">
-          <motion.button
-            whileHover={{ scale: isLoading ? 1 : 1.02 }}
-            whileTap={{ scale: isLoading ? 1 : 0.98 }}
-            className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-            onClick={form.handleSubmit(onSubmit)}
-            disabled={isLoading}
-          >
-            {isLoading ? "Setting up..." : "Setup Account"}
-          </motion.button>
-        </div>
       </div>
     </motion.div>
   );

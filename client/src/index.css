@@ -254,3 +254,21 @@
     max-height: 30vh;
   }
 }
+
+/* Safe area for bottom elements */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+/* Height-specific optimizations for profile setup */
+@media (max-height: 667px) {
+  .mobile-content {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-height: 568px) {
+  .mobile-content {
+    padding: 0.5rem;
+  }
+}
