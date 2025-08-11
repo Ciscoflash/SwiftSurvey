@@ -42,6 +42,31 @@ export default function GetStartedScreen() {
             Login
           </button>
         </div>
+        
+        {/* Development Navigation Helper */}
+        <div className="mt-8 text-center text-xs text-gray-500 space-y-2">
+          <div>Quick Navigation:</div>
+          <div className="flex gap-2 justify-center">
+            <button 
+              onClick={() => navigateToScreen("/")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Splash
+            </button>
+            <button 
+              onClick={() => navigateToScreen("/signup")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Signup
+            </button>
+            <button 
+              onClick={() => navigateToScreen("/email")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Email
+            </button>
+          </div>
+        </div>
       </div>
     </motion.div>
   );

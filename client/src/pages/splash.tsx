@@ -8,7 +8,7 @@ export default function SplashScreen() {
 
   useEffect(() => {
     // Auto-advance through splash -> brand -> get started
-    navigateWithDelay("/get-started", 3000);
+    navigateWithDelay("/get-started", 2500);
   }, [navigateWithDelay]);
 
   return (
