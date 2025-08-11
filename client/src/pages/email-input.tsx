@@ -64,14 +64,14 @@ export default function EmailInputScreen() {
       <div className="mobile-content h-full flex flex-col">
         {/* Back Button */}
         <button 
-          className="self-start mb-8 text-white text-2xl hover:text-gray-300 transition-colors flex items-center"
+          className="self-start mb-8 mt-[50px] text-white text-2xl hover:text-gray-300 transition-colors flex items-center"
           onClick={() => navigateToScreen("/signup")}
         >
           <ArrowLeft size={24} />
         </button>
         
         {/* Header */}
-        <div className="mb-8 sm:mb-12">
+        <div className="mb-8 sm:mb-12 mt-[200px]">
           <h1 className="text-responsive-lg font-bold text-white mb-2">Enter your email</h1>
         </div>
         
@@ -84,12 +84,12 @@ export default function EmailInputScreen() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-gray-400 text-sm">Email</FormLabel>
+                    <FormLabel className="text-gray-400 text-lg">Email</FormLabel>
                     <FormControl>
                       <Input
                         type="email"
                         placeholder="example@email.com"
-                        className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
+                        className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-6 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
                         {...field}
                       />
                     </FormControl>

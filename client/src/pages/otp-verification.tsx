@@ -85,7 +85,7 @@ export default function OTPVerificationScreen() {
       transition={{ duration: 0.3 }}
       className="gradient-bg-alt min-h-screen min-h-[100dvh]"
     >
-      <div className="mobile-content h-full flex flex-col">
+      <div className="mobile-content h-full flex flex-col mt-[50px]">
         {/* Back Button */}
         <button 
           className="self-start mb-6 sm:mb-8 text-white text-2xl hover:text-gray-300 transition-colors flex items-center"
