@@ -9,6 +9,8 @@ import SplashScreen from "@/pages/splash";
 import GetStartedScreen from "@/pages/get-started";
 import SignupScreen from "@/pages/signup";
 import EmailInputScreen from "@/pages/email-input";
+import OTPVerificationScreen from "@/pages/otp-verification";
+import WelcomeScreen from "@/pages/welcome";
 
 function Router() {
   const { currentScreen } = useScreenNavigation();
@@ -22,6 +24,8 @@ function Router() {
           <Route path="/get-started" component={GetStartedScreen} />
           <Route path="/signup" component={SignupScreen} />
           <Route path="/email" component={EmailInputScreen} />
+          <Route path="/otp" component={OTPVerificationScreen} />
+          <Route path="/welcome" component={WelcomeScreen} />
         </Switch>
       </div>
     </div>

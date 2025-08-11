@@ -65,6 +65,18 @@ export default function GetStartedScreen() {
             >
               Email
             </button>
+            <button 
+              onClick={() => navigateToScreen("/otp")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              OTP
+            </button>
+            <button 
+              onClick={() => navigateToScreen("/welcome")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Welcome
+            </button>
           </div>
         </div>
       </div>

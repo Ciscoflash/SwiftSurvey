@@ -36,11 +36,11 @@ export default function EmailInputScreen() {
       
       toast({
         title: "Email validated",
-        description: "Proceeding to complete your registration...",
+        description: "Verification code sent to your email...",
       });
       
-      // TODO: Navigate to next step (password/verification)
-      console.log("Email submitted:", data.email);
+      // Navigate to OTP verification
+      navigateToScreen("/otp");
       
     } catch (error) {
       toast({
