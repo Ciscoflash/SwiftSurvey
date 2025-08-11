@@ -17,6 +17,8 @@ import PreferencesScreen from "@/pages/preferences";
 import LocationScreen from "@/pages/location";
 import FriendsScreen from "@/pages/friends";
 import PhotoCaptureScreen from "@/pages/photo-capture";
+import NotificationsScreen from "@/pages/notifications";
+import FinalWelcomeScreen from "@/pages/final-welcome";
 import MainAppScreen from "@/pages/main-app";
 
 function Router() {
@@ -39,6 +41,8 @@ function Router() {
           <Route path="/location" component={LocationScreen} />
           <Route path="/friends" component={FriendsScreen} />
           <Route path="/photo-capture" component={PhotoCaptureScreen} />
+          <Route path="/notifications" component={NotificationsScreen} />
+          <Route path="/final-welcome" component={FinalWelcomeScreen} />
           <Route path="/main-app" component={MainAppScreen} />
         </Switch>
       </div>

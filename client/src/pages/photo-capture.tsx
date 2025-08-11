@@ -15,7 +15,7 @@ export default function PhotoCaptureScreen() {
   ];
 
   const handleGotIt = () => {
-    navigateToScreen("/main-app");
+    navigateToScreen("/notifications");
   };
 
   const handleTakePhoto = () => {
@@ -36,7 +36,7 @@ export default function PhotoCaptureScreen() {
         <div className="flex justify-end mb-4">
           <button 
             className="text-white/70 text-sm hover:text-white transition-colors"
-            onClick={() => navigateToScreen("/main-app")}
+            onClick={() => navigateToScreen("/notifications")}
           >
             Skip
           </button>

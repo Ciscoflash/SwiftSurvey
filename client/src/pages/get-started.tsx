@@ -107,6 +107,18 @@ export default function GetStartedScreen() {
             >
               Photo
             </button>
+            <button 
+              onClick={() => navigateToScreen("/notifications")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Notifications
+            </button>
+            <button 
+              onClick={() => navigateToScreen("/final-welcome")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Final Welcome
+            </button>
           </div>
         </div>
       </div>
