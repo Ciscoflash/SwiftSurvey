@@ -8,7 +8,7 @@ export default function MainAppScreen() {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.4 }}
-      className="gradient-bg min-h-screen flex flex-col items-center justify-center px-8"
+      className="gradient-bg min-h-screen min-h-[100dvh] flex flex-col items-center justify-center mobile-content"
     >
       {/* Logo */}
       <motion.div
@@ -27,7 +27,7 @@ export default function MainAppScreen() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-center mb-12"
       >
-        <h1 className="text-3xl font-bold text-white mb-4">
+        <h1 className="text-responsive-xl font-bold text-white mb-4">
           Welcome to Tempo!
         </h1>
         

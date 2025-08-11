@@ -15,7 +15,7 @@ export default function WelcomeScreen() {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.4 }}
-      className="gradient-bg min-h-screen flex flex-col items-center justify-center px-8"
+      className="gradient-bg min-h-screen min-h-[100dvh] flex flex-col items-center justify-center mobile-content"
     >
       {/* Skip ahead button */}
       <div className="absolute top-16 right-8">
@@ -45,7 +45,7 @@ export default function WelcomeScreen() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-3xl font-bold text-white mb-4"
+          className="text-responsive-xl font-bold text-white mb-4"
         >
           Welcome to Tempo
         </motion.h1>
@@ -54,7 +54,7 @@ export default function WelcomeScreen() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-2xl font-bold text-white mb-6"
+          className="text-responsive-lg font-bold text-white mb-6"
         >
           Champ 🔥
         </motion.h2>
@@ -83,12 +83,12 @@ export default function WelcomeScreen() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1 }}
-        className="w-full max-w-sm"
+        className="w-full"
       >
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="tempo-button w-full py-4 px-6 rounded-full text-white font-semibold text-lg shadow-lg"
+          className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg"
           onClick={handleSetupAccount}
         >
           Setup Account

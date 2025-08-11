@@ -10,7 +10,7 @@ export default function WelcomePersonalizedScreen() {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.4 }}
-      className="gradient-bg min-h-screen relative overflow-hidden"
+      className="gradient-bg min-h-screen min-h-[100dvh] relative overflow-hidden"
     >
       {/* Skip Button */}
       <div className="absolute top-16 right-8 z-20">
@@ -68,7 +68,7 @@ export default function WelcomePersonalizedScreen() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen mobile-content">
         {/* Profile Avatar */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -92,10 +92,10 @@ export default function WelcomePersonalizedScreen() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mb-12"
         >
-          <h1 className="text-3xl font-bold text-white mb-2">
+          <h1 className="text-responsive-xl font-bold text-white mb-2">
             Hey John 👋, You're all
           </h1>
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-responsive-xl font-bold text-white mb-6">
             set!
           </h2>
         </motion.div>
@@ -113,12 +113,12 @@ export default function WelcomePersonalizedScreen() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="w-full max-w-sm"
+          className="w-full"
         >
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="tempo-button w-full py-4 px-6 rounded-full text-white font-semibold text-lg shadow-lg"
+            className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg"
             onClick={() => navigateToScreen("/location")}
           >
             Continue

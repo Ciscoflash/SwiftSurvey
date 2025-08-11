@@ -33,7 +33,7 @@ export default function LocationScreen() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.3 }}
-      className="gradient-bg min-h-screen flex flex-col items-center justify-center px-8"
+      className="gradient-bg min-h-screen min-h-[100dvh] flex flex-col items-center justify-center mobile-content"
     >
       {/* Skip Button */}
       <div className="absolute top-16 right-8">
@@ -64,10 +64,10 @@ export default function LocationScreen() {
         transition={{ duration: 0.6, delay: 0.4 }}
         className="text-center mb-12"
       >
-        <h1 className="text-3xl font-bold text-white mb-6">
+        <h1 className="text-responsive-xl font-bold text-white mb-6">
           Let's find the vibe
         </h1>
-        <h2 className="text-3xl font-bold text-white mb-6">
+        <h2 className="text-responsive-xl font-bold text-white mb-6">
           around you 📍
         </h2>
         
@@ -90,12 +90,12 @@ export default function LocationScreen() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 1 }}
-        className="w-full max-w-sm"
+        className="w-full"
       >
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="tempo-button w-full py-4 px-6 rounded-full text-white font-semibold text-lg shadow-lg"
+          className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg"
           onClick={handleTurnOnLocation}
         >
           Turn on Location

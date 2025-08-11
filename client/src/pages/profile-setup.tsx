@@ -77,9 +77,9 @@ export default function ProfileSetupScreen() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.3 }}
-      className="gradient-bg-alt min-h-screen"
+      className="gradient-bg-alt min-h-screen min-h-[100dvh]"
     >
-      <div className="px-8 py-12 h-full flex flex-col">
+      <div className="mobile-content h-full flex flex-col">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <div className="text-white">
@@ -94,13 +94,13 @@ export default function ProfileSetupScreen() {
         </div>
 
         {/* Profile Picture */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 sm:mb-8">
           <div className="relative inline-block">
-            <div className="w-24 h-24 bg-gradient-to-br from-tempo-orange to-tempo-orange-light rounded-full flex items-center justify-center mx-auto mb-2">
-              <span className="text-2xl">👤</span>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-tempo-orange to-tempo-orange-light rounded-full flex items-center justify-center mx-auto mb-2">
+              <span className="text-xl sm:text-2xl">👤</span>
             </div>
-            <button className="absolute bottom-0 right-0 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
-              <Camera size={16} className="text-gray-600" />
+            <button className="absolute bottom-0 right-0 w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+              <Camera size={14} className="sm:size-4 text-gray-600" />
             </button>
           </div>
           <div className="text-white text-sm">Tempo@live.com</div>
@@ -109,7 +109,7 @@ export default function ProfileSetupScreen() {
         {/* Form */}
         <div className="flex-1">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3 sm:space-y-4">
               <FormField
                 control={form.control}
                 name="fullName"
@@ -119,7 +119,7 @@ export default function ProfileSetupScreen() {
                     <FormControl>
                       <Input
                         placeholder="John doe"
-                        className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
+                        className="w-full bg-white/10 border border-white/20 rounded-xl px-3 py-2.5 sm:px-4 sm:py-3 text-white placeholder-gray-500 focus:outline-none focus:border-tempo-orange focus:ring-1 focus:ring-tempo-orange transition-colors"
                         {...field}
                         onFocus={() => setShowKeyboard(false)}
                       />
@@ -219,14 +219,14 @@ export default function ProfileSetupScreen() {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
-            className="mt-4 bg-white/5 rounded-t-2xl p-4"
+            className="mt-4 bg-white/5 rounded-t-2xl p-3 sm:p-4 keyboard-responsive"
           >
             {keyboardLayout.map((row, rowIndex) => (
               <div key={rowIndex} className="flex justify-center gap-1 mb-2">
                 {row.map((key) => (
                   <button
                     key={key}
-                    className="w-8 h-8 bg-white/10 rounded text-white text-sm hover:bg-white/20 transition-colors"
+                    className="w-7 h-7 sm:w-8 sm:h-8 bg-white/10 rounded text-white text-xs sm:text-sm hover:bg-white/20 transition-colors"
                     onClick={() => {
                       const currentValue = form.getValues("username");
                       form.setValue("username", currentValue + key);
@@ -239,7 +239,7 @@ export default function ProfileSetupScreen() {
             ))}
             <div className="flex justify-center gap-2 mt-2">
               <button
-                className="px-4 py-2 bg-tempo-orange rounded text-white text-sm font-medium"
+                className="px-3 py-1.5 sm:px-4 sm:py-2 bg-tempo-orange rounded text-white text-xs sm:text-sm font-medium"
                 onClick={() => setShowKeyboard(false)}
               >
                 Done
@@ -249,11 +249,11 @@ export default function ProfileSetupScreen() {
         )}
 
         {/* Setup Account Button */}
-        <div className="mt-6">
+        <div className="mt-4 sm:mt-6">
           <motion.button
             whileHover={{ scale: isLoading ? 1 : 1.02 }}
             whileTap={{ scale: isLoading ? 1 : 0.98 }}
-            className="tempo-button w-full py-4 px-6 rounded-full text-white font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={form.handleSubmit(onSubmit)}
             disabled={isLoading}
           >

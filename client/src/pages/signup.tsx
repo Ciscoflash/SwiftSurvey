@@ -16,7 +16,7 @@ export default function SignupScreen() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="gradient-bg-alt min-h-screen relative"
+      className="gradient-bg-alt min-h-screen min-h-[100dvh] relative"
     >
       {/* Modal Background */}
       <div className="absolute inset-0 bg-black/50 z-10" />
@@ -26,7 +26,7 @@ export default function SignupScreen() {
         initial={{ y: "100%" }}
         animate={{ y: 0 }}
         transition={{ type: "spring", damping: 25, stiffness: 500 }}
-        className="absolute bottom-0 left-0 right-0 bg-tempo-dark-secondary rounded-t-3xl p-8 z-20 min-h-[60vh]"
+        className="absolute bottom-0 left-0 right-0 bg-tempo-dark-secondary rounded-t-3xl p-6 sm:p-8 z-20 min-h-[60vh]"
       >
         {/* Close Button */}
         <button 
@@ -47,7 +47,7 @@ export default function SignupScreen() {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="tempo-button w-full py-4 px-6 rounded-full text-white font-semibold mb-4 shadow-lg"
+          className="tempo-button w-full btn-responsive rounded-full text-white font-semibold mb-4 shadow-lg"
           onClick={() => navigateToScreen("/email")}
         >
           Continue with Email
@@ -61,11 +61,11 @@ export default function SignupScreen() {
         </div>
         
         {/* Social Buttons */}
-        <div className="flex space-x-4 mb-6">
+        <div className="flex space-x-3 sm:space-x-4 mb-6">
           <motion.button
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="social-btn flex-1 bg-white/10 border border-white/20 rounded-xl py-3 px-4 flex items-center justify-center backdrop-blur-sm"
+            className="social-btn flex-1 bg-white/10 border border-white/20 rounded-xl py-2.5 sm:py-3 px-3 sm:px-4 flex items-center justify-center backdrop-blur-sm"
             onClick={() => handleSocialLogin("Google")}
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -91,7 +91,7 @@ export default function SignupScreen() {
           <motion.button
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="social-btn flex-1 bg-white/10 border border-white/20 rounded-xl py-3 px-4 flex items-center justify-center backdrop-blur-sm"
+            className="social-btn flex-1 bg-white/10 border border-white/20 rounded-xl py-2.5 sm:py-3 px-3 sm:px-4 flex items-center justify-center backdrop-blur-sm"
             onClick={() => handleSocialLogin("Apple")}
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">

@@ -20,9 +20,9 @@ function Router() {
   const { currentScreen } = useScreenNavigation();
 
   return (
-    <div className="min-h-screen bg-tempo-dark text-white overflow-hidden">
+    <div className="min-h-screen bg-tempo-dark text-white overflow-hidden mobile-safe-area">
       <MobileStatusBar />
-      <div className="max-w-sm mx-auto relative h-screen">
+      <div className="mobile-container">
         <Switch>
           <Route path="/" component={SplashScreen} />
           <Route path="/get-started" component={GetStartedScreen} />

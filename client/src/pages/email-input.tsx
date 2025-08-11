@@ -59,9 +59,9 @@ export default function EmailInputScreen() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.3 }}
-      className="gradient-bg-alt min-h-screen"
+      className="gradient-bg-alt min-h-screen min-h-[100dvh]"
     >
-      <div className="px-8 py-12 h-full flex flex-col">
+      <div className="mobile-content h-full flex flex-col">
         {/* Back Button */}
         <button 
           className="self-start mb-8 text-white text-2xl hover:text-gray-300 transition-colors flex items-center"
@@ -71,8 +71,8 @@ export default function EmailInputScreen() {
         </button>
         
         {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-2xl font-bold text-white mb-2">Enter your email</h1>
+        <div className="mb-8 sm:mb-12">
+          <h1 className="text-responsive-lg font-bold text-white mb-2">Enter your email</h1>
         </div>
         
         {/* Email Form */}
@@ -106,7 +106,7 @@ export default function EmailInputScreen() {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="tempo-button w-full py-4 px-6 rounded-full text-white font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={form.handleSubmit(onSubmit)}
             disabled={isLoading}
           >

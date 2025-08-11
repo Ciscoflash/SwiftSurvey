@@ -11,20 +11,20 @@ export default function GetStartedScreen() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.3 }}
-      className="gradient-bg-alt min-h-screen flex flex-col justify-center items-center px-8"
+      className="gradient-bg-alt min-h-screen min-h-[100dvh] flex flex-col justify-center items-center mobile-content"
     >
-      <div className="text-center mb-12">
-        <div className="flex items-center justify-center mb-8">
+      <div className="text-center mb-8 sm:mb-12">
+        <div className="flex items-center justify-center mb-6 sm:mb-8">
           <TempoLogo size="md" className="mr-3" />
-          <h1 className="text-2xl font-bold text-white">tempo</h1>
+          <h1 className="text-responsive-lg font-bold text-white">tempo</h1>
         </div>
       </div>
       
-      <div className="w-full max-w-sm space-y-6">
+      <div className="w-full space-y-4 sm:space-y-6">
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="tempo-button w-full py-4 px-6 rounded-full text-white font-semibold text-lg shadow-lg"
+          className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg"
           onClick={() => navigateToScreen("/signup")}
         >
           Get Started
@@ -44,9 +44,9 @@ export default function GetStartedScreen() {
         </div>
         
         {/* Development Navigation Helper */}
-        <div className="mt-8 text-center text-xs text-gray-500 space-y-2">
+        <div className="mt-6 sm:mt-8 text-center text-xs text-gray-500 space-y-2">
           <div>Quick Navigation:</div>
-          <div className="flex gap-2 justify-center">
+          <div className="grid grid-cols-3 sm:flex sm:flex-wrap gap-1 sm:gap-2 justify-center">
             <button 
               onClick={() => navigateToScreen("/")} 
               className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
