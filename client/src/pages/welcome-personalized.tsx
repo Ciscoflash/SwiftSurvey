@@ -16,7 +16,7 @@ export default function WelcomePersonalizedScreen() {
       <div className="absolute top-16 right-8 z-20">
         <button 
           className="text-white/70 text-sm hover:text-white transition-colors"
-          onClick={() => navigateToScreen("/preferences")}
+          onClick={() => navigateToScreen("/location")}
         >
           Skip
         </button>
@@ -119,7 +119,7 @@ export default function WelcomePersonalizedScreen() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="tempo-button w-full btn-responsive rounded-full text-white font-semibold shadow-lg"
-            onClick={() => navigateToScreen("/preferences")}
+            onClick={() => navigateToScreen("/location")}
           >
             Continue
           </motion.button>

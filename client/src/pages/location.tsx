@@ -11,19 +11,16 @@ export default function LocationScreen() {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           console.log("Location granted:", position.coords);
-          // TODO: Navigate to main app
-          navigateToScreen("/main-app");
+          navigateToScreen("/preferences");
         },
         (error) => {
           console.log("Location denied:", error);
-          // TODO: Navigate to main app anyway
-          navigateToScreen("/main-app");
+          navigateToScreen("/preferences");
         }
       );
     } else {
       console.log("Geolocation not supported");
-      // TODO: Navigate to main app
-      navigateToScreen("/main-app");
+      navigateToScreen("/preferences");
     }
   };
 
@@ -39,7 +36,7 @@ export default function LocationScreen() {
       <div className="absolute top-16 right-8">
         <button 
           className="text-white/70 text-sm hover:text-white transition-colors"
-          onClick={() => navigateToScreen("/main-app")}
+          onClick={() => navigateToScreen("/preferences")}
         >
           Skip
         </button>
