@@ -6,8 +6,7 @@ export default function WelcomeScreen() {
   const { navigateToScreen } = useScreenNavigation();
 
   const handleSetupAccount = () => {
-    // TODO: Navigate to main app or profile setup
-    console.log("Setup account");
+    navigateToScreen("/profile-setup");
   };
 
   return (

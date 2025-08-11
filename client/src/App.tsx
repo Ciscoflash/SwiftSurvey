@@ -11,6 +11,10 @@ import SignupScreen from "@/pages/signup";
 import EmailInputScreen from "@/pages/email-input";
 import OTPVerificationScreen from "@/pages/otp-verification";
 import WelcomeScreen from "@/pages/welcome";
+import ProfileSetupScreen from "@/pages/profile-setup";
+import WelcomePersonalizedScreen from "@/pages/welcome-personalized";
+import LocationScreen from "@/pages/location";
+import MainAppScreen from "@/pages/main-app";
 
 function Router() {
   const { currentScreen } = useScreenNavigation();
@@ -26,6 +30,10 @@ function Router() {
           <Route path="/email" component={EmailInputScreen} />
           <Route path="/otp" component={OTPVerificationScreen} />
           <Route path="/welcome" component={WelcomeScreen} />
+          <Route path="/profile-setup" component={ProfileSetupScreen} />
+          <Route path="/welcome-personalized" component={WelcomePersonalizedScreen} />
+          <Route path="/location" component={LocationScreen} />
+          <Route path="/main-app" component={MainAppScreen} />
         </Switch>
       </div>
     </div>

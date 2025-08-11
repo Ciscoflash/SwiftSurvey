@@ -77,6 +77,18 @@ export default function GetStartedScreen() {
             >
               Welcome
             </button>
+            <button 
+              onClick={() => navigateToScreen("/profile-setup")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Profile
+            </button>
+            <button 
+              onClick={() => navigateToScreen("/location")} 
+              className="px-2 py-1 bg-gray-700 rounded text-white text-xs"
+            >
+              Location
+            </button>
           </div>
         </div>
       </div>
