@@ -13,6 +13,7 @@ import OTPVerificationScreen from "@/pages/otp-verification";
 import WelcomeScreen from "@/pages/welcome";
 import ProfileSetupScreen from "@/pages/profile-setup";
 import WelcomePersonalizedScreen from "@/pages/welcome-personalized";
+import PreferencesScreen from "@/pages/preferences";
 import LocationScreen from "@/pages/location";
 import MainAppScreen from "@/pages/main-app";
 
@@ -32,6 +33,7 @@ function Router() {
           <Route path="/welcome" component={WelcomeScreen} />
           <Route path="/profile-setup" component={ProfileSetupScreen} />
           <Route path="/welcome-personalized" component={WelcomePersonalizedScreen} />
+          <Route path="/preferences" component={PreferencesScreen} />
           <Route path="/location" component={LocationScreen} />
           <Route path="/main-app" component={MainAppScreen} />
         </Switch>
